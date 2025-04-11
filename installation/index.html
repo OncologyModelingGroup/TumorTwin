@@ -22,7 +22,7 @@
     
     
       
-        <title>Installation - TumorTwin</title>
+        <title>⚙️ Installation Guide for TumorTwin - TumorTwin</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#installation-guide-for-tumortwin" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              ⚙️ Installation Guide for TumorTwin
             
           </span>
         </div>
@@ -403,17 +403,94 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ⚙️ Installation Guide for TumorTwin
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Installation
+    ⚙️ Installation Guide for TumorTwin
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-1-using-anaconda-recommended-for-most-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Using Anaconda (recommended for most users)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-using-venv-lightweight-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Using venv (lightweight setup)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-tumortwin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install TumorTwin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-running-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional: Running the Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1395,6 +1472,59 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-1-using-anaconda-recommended-for-most-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Using Anaconda (recommended for most users)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-using-venv-lightweight-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Using venv (lightweight setup)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-tumortwin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install TumorTwin
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-running-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional: Running the Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1409,20 +1539,81 @@
 
 
 
-<h1 id="installation">Installation</h1>
-<ol>
-<li>Make sure you have Python 3.10 or higher (currently tested on Python 3.12)</li>
-<li>Setting up python environments using Anaconda and Python 3.12<ul>
-<li><a href="https://docs.anaconda.com/anaconda/install/">Install Anaconda</a></li>
-<li>Setup Python environment with python 3.12 using <code>conda create -n [ENV_NAME] python=3.12 anaconda</code></li>
-<li>Activate Python environment using <code>conda activate [ENV_NAME]</code></li>
+<h1 id="installation-guide-for-tumortwin">⚙️ Installation Guide for TumorTwin</h1>
+<p>TumorTwin is tested with <strong>Python 3.11</strong>, and we recommend using a virtual environment for a clean setup.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Python (tested on Python <strong>3.11</strong>)</li>
+<li><code>git</code></li>
+<li>A package manager like <a href="https://docs.anaconda.com/anaconda/install/">Anaconda</a> or <code>pip</code></li>
 </ul>
+<hr />
+<h2 id="option-1-using-anaconda-recommended-for-most-users">Option 1: Using Anaconda (recommended for most users)</h2>
+<ol>
+<li>
+<p><strong>Install Anaconda</strong> (if not already installed):<br />
+   https://docs.anaconda.com/anaconda/install</p>
 </li>
-<li>Clone <code>TumorTwin</code> repository: <code>git clone https://github.com/OncologyModelingGroup/TumorTwin.git</code> using your GitHub credentials.</li>
-<li>Navigate into the cloned folder <code>cd TumorTwin</code></li>
-<li>Install dependencies using <code>pip install .</code> or <code>pip install -e .</code> to install in development mode.</li>
-<li>Open <code>HGG_Demo.ipynb.</code> and run the notebook.</li>
+<li>
+<p><strong>Create a new environment with Python 3.11</strong>:</p>
+</li>
 </ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>tumortwin<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11<span class="w"> </span>anaconda
+</span></code></pre></div>
+<ol>
+<li><strong>Activate the environment</strong>:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>conda<span class="w"> </span>activate<span class="w"> </span>tumortwin
+</span></code></pre></div>
+<hr />
+<h2 id="option-2-using-venv-lightweight-setup">Option 2: Using <code>venv</code> (lightweight setup)</h2>
+<ol>
+<li><strong>Create a virtual environment</strong>:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3.11<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>tumortwin-env
+</span></code></pre></div>
+<ol>
+<li>
+<p><strong>Activate it</strong>:</p>
+</li>
+<li>
+<p>On macOS/Linux:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">source</span><span class="w"> </span>tumortwin-env/bin/activate
+</span></code></pre></div>
+</li>
+<li>
+<p>On Windows:</p>
+<div class="language-powershell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">.\</span><span class="n">tumortwin-env</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">activate</span>
+</span></code></pre></div>
+</li>
+</ol>
+<hr />
+<h2 id="install-tumortwin">Install TumorTwin</h2>
+<ol>
+<li><strong>Clone the repository</strong>:</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OncologyModelingGroup/TumorTwin.git
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>TumorTwin
+</span></code></pre></div>
+<ol>
+<li>
+<p><strong>Install dependencies</strong>:</p>
+</li>
+<li>
+<p>Standard installation:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pip<span class="w"> </span>install<span class="w"> </span>.
+</span></code></pre></div>
+</li>
+<li>
+<p>Development mode (editable install + dev tools):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;.[dev]&quot;</span>
+</span></code></pre></div>
+</li>
+</ol>
+<hr />
+<h2 id="optional-running-the-demo">Optional: Running the Demo</h2>
+<p>Open <code>HGG_Demo.ipynb</code> or <code>TNBC_Demo.ipynb</code> in Jupyter, VS Code, Colab or your preferred IDE.</p>
+<hr />
 
 
 
