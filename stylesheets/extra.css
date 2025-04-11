@@ -1,0 +1,10 @@
+
+    /*--md-primary-fg-color:        ;
+    /* --md-primary-fg-color--light: #ECB7B7; */
+    /* --md-primary-fg-color--dark:  #90030C; */
+
+:root {
+    --md-primary-fg-color:        #3a5d83; /*#bf5700*/
+    --md-primary-fg-color--light: #83abcf;
+    --md-primary-fg-color--dark:  #90030C;
+  }
