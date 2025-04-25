@@ -21,7 +21,7 @@ def plot_loss(losses: torch.Tensor, ax: Optional[Axes] = None):
     # Create figure
     if ax is None:
         _, ax = plt.subplots(figsize=(4, 2))
-    ax.plot(log_losses)
+    ax.plot(log_losses, 'k')
 
     # Set y-axis ticks
     ax.set_yticks(y_ticks)
@@ -138,7 +138,7 @@ def plot_measured_TCC(
         fig, ax = plt.subplots(1, 1, figsize=(1, 1))
 
     measured_cell_counts = [
-        compute_total_cell_count(N, carrying_capacity)
+        compute_total_cell_count(N, carrying_capacity)/1.0e11
         for N in measured_cellularity_maps
     ]
 
@@ -170,14 +170,14 @@ def plot_calibration(
     # plt.subplots(figsize=(7, 3.5))
     plt.plot(
         [days_since_first(t, timepoints[0]) for t in timepoints],
-        [p.detach() for p in predicted_cell_counts],
+        [p.detach()/1.0e11 for p in predicted_cell_counts],
         color="k",
         linewidth=2,
         alpha=alpha,
     )
 
     measured_cell_counts = [
-        compute_total_cell_count(N.array, carrying_capacity)
+        compute_total_cell_count(N.array, carrying_capacity)/1.0e11
         for N in measured_cellularity_maps
     ]
     plt.plot(
@@ -188,9 +188,8 @@ def plot_calibration(
         color="#984ea3",
         linestyle="None",
     )
-    plt.title("Total tumor cell count")
     plt.xlabel("Days since first image")
-    plt.ylabel("Total tumor cell count")
+    plt.ylabel(r'Total tumor cell count ($\times 10^{11}$)')
     # plt.show()
 
 
@@ -282,5 +281,5 @@ def plot_calibration_iter(
         )
 
     plt.xlabel("Days since first image")
-    plt.ylabel("Total tumor cell count")
+    plt.ylabel(r'Total tumor cell count ($\times 10^{11}$)')
     plt.show()

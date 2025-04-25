@@ -41,31 +41,32 @@ def plot_cellularity_map(
     y_id = np.s_[:]
     slice_id = find_best_slice(solution.detach().numpy())
 
-    cellularity_image = solution.detach().numpy()[:, :, slice_id]
-    t1_image = patient_data.T1_post_image.array[:, :, slice_id]  # T1 image (grayscale)
+    cellularity_image = np.rot90(np.pad(solution.detach().numpy()[:, :, slice_id],pad_width=1,mode='constant',constant_values=0),axes=(-1,0))
+    t1_image = np.rot90(np.pad(patient_data.T1_post_image.array[:, :, slice_id],pad_width=1,mode='constant',constant_values=0),axes=(-1,0))
     blended_image = overlay_cellularity_on_t1(
         cellularity=cellularity_image, t1=t1_image, threshold=threshold
     )
 
-    vmax_value = cellularity_image.max()
+    # vmax_value = cellularity_image.max()
+    vmax_value = 1.0
 
     # Create figure and subplots
     if ax is None:
         fig, ax = plt.subplots(1, 1, figsize=(4, 4))
 
     # Plot images
-    _ = ax.imshow(blended_image, vmin=0, vmax=vmax_value)
+    im = ax.imshow(blended_image, vmin=0, vmax=vmax_value)
 
     # Titles with Times New Roman font
     if time is not None:
         ax.set_title(
-            f"t = {time}",
+            f"t={time}",
         )
 
     # Remove axis ticks
     ax.set_xticks([])
     ax.set_yticks([])
-    return ax
+    return ax, im
 
 
 def plot_predicted_TCC(
@@ -86,12 +87,12 @@ def plot_predicted_TCC(
         fig, ax = plt.subplots(1, 1, figsize=(4, 4))
     ax.plot(
         [days_since_first(t, timepoints[0]) for t in timepoints],
-        [p.detach() for p in predicted_cell_counts],
+        [p.detach()/ 1.0e11 for p in predicted_cell_counts],
         color=color,
         alpha=alpha,
     )
 
-    ax.set_title("Total tumor cell count")
+    # ax.set_title("Total tumor cell count ")
     ax.set_xlabel("Days since first image")
-    ax.set_ylabel("Total tumor cell count")
+    ax.set_ylabel(r'Total tumor cell count ($\times 10^{11}$)')
     return ax
