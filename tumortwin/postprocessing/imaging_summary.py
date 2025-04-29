@@ -65,24 +65,24 @@ def plot_imaging_summary(patient_data: BasePatientData):
         if adc is not None:
             if anatomic_image is not None:
                 axes[0, col_idx].imshow(
-                    np.rot90(np.pad(anatomic_image.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(-1,0)), cmap="gray", aspect="auto"
+                    np.rot90(np.pad(anatomic_image.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3), cmap="gray", aspect="auto"
                 )
 
             axes[1, col_idx].imshow(
-                np.rot90(np.pad(adc.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(-1,0)), cmap="jet", aspect="auto"
+                np.rot90(np.pad(adc.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3), cmap="jet", aspect="auto"
             )
 
             if anatomic_mask is not None:
                 axes[0, col_idx].contour(
-                    np.rot90(np.pad(anatomic_mask.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(-1,0)), colors="blue"
+                    np.rot90(np.pad(anatomic_mask.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3), colors="blue"
                 )
                 axes[1, col_idx].contour(
-                    np.rot90(np.pad(anatomic_mask.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(-1,0)), colors="blue"
+                    np.rot90(np.pad(anatomic_mask.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3), colors="blue"
                 )
 
             if roi is not None:
-                axes[0, col_idx].contour(np.rot90(np.pad(roi.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(-1,0)), colors="red")
-                axes[1, col_idx].contour(np.rot90(np.pad(roi.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(-1,0)), colors="red")
+                axes[0, col_idx].contour(np.rot90(np.pad(roi.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3), colors="red")
+                axes[1, col_idx].contour(np.rot90(np.pad(roi.array[:, :, best_slice],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3), colors="red")
 
         axes[0, col_idx].set_title(f"Visit {col_idx*2 + 1}")
         axes[0, 0].set_ylabel("T1")

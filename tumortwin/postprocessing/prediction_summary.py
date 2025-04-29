@@ -41,8 +41,8 @@ def plot_cellularity_map(
     y_id = np.s_[:]
     slice_id = find_best_slice(solution.detach().numpy())
 
-    cellularity_image = np.rot90(np.pad(solution.detach().numpy()[:, :, slice_id],pad_width=1,mode='constant',constant_values=0),axes=(-1,0))
-    t1_image = np.rot90(np.pad(patient_data.T1_post_image.array[:, :, slice_id],pad_width=1,mode='constant',constant_values=0),axes=(-1,0))
+    cellularity_image = np.rot90(np.pad(solution.detach().numpy()[:, :, slice_id],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3)
+    t1_image = np.rot90(np.pad(patient_data.T1_post_image.array[:, :, slice_id],pad_width=1,mode='constant',constant_values=0),axes=(1,0),k=3)
     blended_image = overlay_cellularity_on_t1(
         cellularity=cellularity_image, t1=t1_image, threshold=threshold
     )
