@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sitename.example/api/solvers/base/">
+        <link rel="canonical" href="https://sitename.example/api/postprocessing/tcc/">
       
       
-        <link rel="prev" href="../../models/rxdx/">
+        <link rel="prev" href="../qoi/">
       
       
-        <link rel="next" href="../torchdiffeq/">
+        <link rel="next" href="../../types/patient_data/hgg_types/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Solver Base Class - TumorTwin</title>
+        <title>Total Cell Count - TumorTwin</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tumortwin.solvers.base" class="md-skip">
+        <a href="#tumortwin.postprocessing.total_cell_count" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Solver Base Class
+              Total Cell Count
             
           </span>
         </div>
@@ -1257,8 +1257,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1269,11 +1267,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
         
           
           <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
@@ -1289,7 +1287,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_4">
             <span class="md-nav__icon md-icon"></span>
             Solvers
@@ -1300,30 +1298,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Solver Base Class
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../solvers/base/" class="md-nav__link">
         
   
   
@@ -1334,57 +1312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
-    <span class="md-ellipsis">
-      base
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
-    <span class="md-ellipsis">
-      ForwardSolver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1397,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../torchdiffeq/" class="md-nav__link">
+      <a href="../../solvers/torchdiffeq/" class="md-nav__link">
         
   
   
@@ -1497,6 +1424,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1507,11 +1436,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_6" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1_6" id="__nav_5_1_6_label" tabindex="0">
@@ -1527,7 +1456,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1_6">
             <span class="md-nav__icon md-icon"></span>
             Postprocessing
@@ -1541,7 +1470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../postprocessing/qoi/" class="md-nav__link">
+      <a href="../qoi/" class="md-nav__link">
         
   
   
@@ -1561,10 +1490,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../postprocessing/tcc/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Total Cell Count
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1575,6 +1524,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.postprocessing.total_cell_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      total_cell_count
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.postprocessing.total_cell_count.compute_total_cell_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_total_cell_count
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1818,35 +1803,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
+  <a href="#tumortwin.postprocessing.total_cell_count" class="md-nav__link">
     <span class="md-ellipsis">
-      base
+      total_cell_count
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
+  <a href="#tumortwin.postprocessing.total_cell_count.compute_total_cell_count" class="md-nav__link">
     <span class="md-ellipsis">
-      ForwardSolver
+      compute_total_cell_count
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1866,95 +1836,14 @@
 
 
 
-  <h1>Solver Base Class</h1>
+  <h1>Total Cell Count</h1>
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="tumortwin.solvers.base"></a>
+<a id="tumortwin.postprocessing.total_cell_count"></a>
     <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="tumortwin.solvers.base.ForwardSolver" class="doc doc-heading">
-            <code>ForwardSolver</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-
-        <p>Abstract base class for forward solvers in tumor growth modeling.</p>
-<p>A forward solver numerically integrates the evolution of the tumor density field
-over specified timepoints, starting from an initial condition.</p>
-
-
-<p><span class="doc-section-title">Methods:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-            <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="solve(timepoints, u_initial) (tumortwin.solvers.base.ForwardSolver.solve)" href="#tumortwin.solvers.base.ForwardSolver.solve">solve</a></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Computes the tumor density at each timepoint by solving the growth model.
-Must be implemented by subclasses.</p>
-                </div>
-              </td>
-            </tr>
-      </tbody>
-    </table>
-
-
-<p><span class="doc-section-title">Raises:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>If a subclass does not implement the <code>solve</code> method.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
 
 
 
@@ -1977,15 +1866,17 @@ Must be implemented by subclasses.</p>
 <div class="doc doc-object doc-function">
 
 
-<h3 id="tumortwin.solvers.base.ForwardSolver.solve" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">solve</span><span class="p">(</span><span class="n">timepoints</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">)</span></code>
+<h2 id="tumortwin.postprocessing.total_cell_count.compute_total_cell_count" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">compute_total_cell_count</span><span class="p">(</span><span class="n">cellularity</span><span class="p">,</span> <span class="n">carrying_capacity</span><span class="p">)</span></code>
 
-</h3>
+</h2>
 
 
     <div class="doc doc-contents ">
 
-        <p>Abstract method to solve the tumor growth model.</p>
+        <p>Computes the total cell count in a given cellularity map.</p>
+<p>The total cell count is calculated as the sum of the cellularity values across
+the map, scaled by the voxel carrying capacity.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2001,14 +1892,15 @@ Must be implemented by subclasses.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>timepoints</code>
+                <code>cellularity</code>
             </td>
             <td>
-                  <code><span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>]</code>
+                  <code><a class="autorefs autorefs-internal" title="Image3D (tumortwin.types.imaging.Image3D)" href="../../types/imaging/#tumortwin.types.imaging.Image3D">Image3D</a> | <span title="numpy.ndarray">ndarray</span> | <span title="torch.Tensor">Tensor</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>List of timepoints at which the solution is desired.</p>
+                <p>The cellularity map,
+which can be an <code>Image3D</code> instance, a Numpy array, or a PyTorch tensor.</p>
               </div>
             </td>
             <td>
@@ -2017,14 +1909,14 @@ Must be implemented by subclasses.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>u_initial</code>
+                <code>carrying_capacity</code>
             </td>
             <td>
-                  <code><span title="torch.Tensor">Tensor</span></code>
+                  <code><span title="float">float</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Initial tumor density field.</p>
+                <p>The carrying capacity of a voxel.</p>
               </div>
             </td>
             <td>
@@ -2046,13 +1938,12 @@ Must be implemented by subclasses.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="typing.Tuple">Tuple</span>[<span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>], <span title="typing.List">List</span>[<span title="torch.Tensor">Tensor</span>]]</code>
+                  <code><span title="float">float</span> | <span title="torch.Tensor">Tensor</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Tuple[List[datetime], List[torch.Tensor]]:
-- List of datetime objects corresponding to the solution timepoints.
-- List of torch.Tensor objects representing the tumor density at each timepoint.</p>
+                <p>float | torch.Tensor: The total cell count. If the input cellularity is
+a PyTorch tensor, the result will also be a tensor.</p>
               </div>
             </td>
           </tr>
@@ -2071,11 +1962,11 @@ Must be implemented by subclasses.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
+                  <code><span title="ValueError">ValueError</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>If not implemented by a subclass.</p>
+                <p>If the input cellularity is of an unsupported type.</p>
               </div>
             </td>
           </tr>
@@ -2086,15 +1977,6 @@ Must be implemented by subclasses.</p>
     </div>
 
 </div>
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
 
 
 

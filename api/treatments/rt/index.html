@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sitename.example/api/solvers/base/">
+        <link rel="canonical" href="https://sitename.example/api/treatments/rt/">
       
       
-        <link rel="prev" href="../../models/rxdx/">
+        <link rel="prev" href="../../preprocessing/crop/">
       
       
-        <link rel="next" href="../torchdiffeq/">
+        <link rel="next" href="../ct/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Solver Base Class - TumorTwin</title>
+        <title>Radiotherapy - TumorTwin</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tumortwin.solvers.base" class="md-skip">
+        <a href="#tumortwin.treatments.radiotherapy" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Solver Base Class
+              Radiotherapy
             
           </span>
         </div>
@@ -1067,6 +1067,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1077,11 +1079,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
@@ -1097,7 +1099,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1_2">
             <span class="md-nav__icon md-icon"></span>
             Treatments
@@ -1108,10 +1110,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../treatments/rt/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Radiotherapy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1122,6 +1144,60 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.radiotherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      radiotherapy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.radiotherapy.compute_radiotherapy_cell_death_fractions" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_radiotherapy_cell_death_fractions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.radiotherapy.compute_radiotherapy_cell_survival_fraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_radiotherapy_cell_survival_fraction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.radiotherapy.plot_radiotherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      plot_radiotherapy
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1134,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../treatments/ct/" class="md-nav__link">
+      <a href="../ct/" class="md-nav__link">
         
   
   
@@ -1257,8 +1333,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1269,11 +1343,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
         
           
           <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
@@ -1289,7 +1363,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_4">
             <span class="md-nav__icon md-icon"></span>
             Solvers
@@ -1300,30 +1374,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Solver Base Class
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../solvers/base/" class="md-nav__link">
         
   
   
@@ -1334,57 +1388,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
-    <span class="md-ellipsis">
-      base
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
-    <span class="md-ellipsis">
-      ForwardSolver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1397,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../torchdiffeq/" class="md-nav__link">
+      <a href="../../solvers/torchdiffeq/" class="md-nav__link">
         
   
   
@@ -1818,35 +1821,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
+  <a href="#tumortwin.treatments.radiotherapy" class="md-nav__link">
     <span class="md-ellipsis">
-      base
+      radiotherapy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
+  <a href="#tumortwin.treatments.radiotherapy.compute_radiotherapy_cell_death_fractions" class="md-nav__link">
     <span class="md-ellipsis">
-      ForwardSolver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
+      compute_radiotherapy_cell_death_fractions
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.radiotherapy.compute_radiotherapy_cell_survival_fraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_radiotherapy_cell_survival_fraction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.radiotherapy.plot_radiotherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      plot_radiotherapy
+    </span>
+  </a>
   
 </li>
       
@@ -1866,95 +1872,14 @@
 
 
 
-  <h1>Solver Base Class</h1>
+  <h1>Radiotherapy</h1>
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="tumortwin.solvers.base"></a>
+<a id="tumortwin.treatments.radiotherapy"></a>
     <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="tumortwin.solvers.base.ForwardSolver" class="doc doc-heading">
-            <code>ForwardSolver</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-
-        <p>Abstract base class for forward solvers in tumor growth modeling.</p>
-<p>A forward solver numerically integrates the evolution of the tumor density field
-over specified timepoints, starting from an initial condition.</p>
-
-
-<p><span class="doc-section-title">Methods:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-            <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="solve(timepoints, u_initial) (tumortwin.solvers.base.ForwardSolver.solve)" href="#tumortwin.solvers.base.ForwardSolver.solve">solve</a></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Computes the tumor density at each timepoint by solving the growth model.
-Must be implemented by subclasses.</p>
-                </div>
-              </td>
-            </tr>
-      </tbody>
-    </table>
-
-
-<p><span class="doc-section-title">Raises:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>If a subclass does not implement the <code>solve</code> method.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
 
 
 
@@ -1977,15 +1902,17 @@ Must be implemented by subclasses.</p>
 <div class="doc doc-object doc-function">
 
 
-<h3 id="tumortwin.solvers.base.ForwardSolver.solve" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">solve</span><span class="p">(</span><span class="n">timepoints</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">)</span></code>
+<h2 id="tumortwin.treatments.radiotherapy.compute_radiotherapy_cell_death_fractions" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">compute_radiotherapy_cell_death_fractions</span><span class="p">(</span><span class="n">radiotherapy_specification</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">alpha_beta_ratio</span><span class="o">=</span><span class="mf">10.0</span><span class="p">)</span></code>
 
-</h3>
+</h2>
 
 
     <div class="doc doc-contents ">
 
-        <p>Abstract method to solve the tumor growth model.</p>
+        <p>Compute cell death fractions for a given radiotherapy protocol.</p>
+<p>This uses the linear-quadratic model to calculate the fraction of cells killed by each
+dose in the protocol.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2001,14 +1928,15 @@ Must be implemented by subclasses.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>timepoints</code>
+                <code>radiotherapy_specification</code>
             </td>
             <td>
-                  <code><span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>]</code>
+                  <code><a class="autorefs autorefs-internal" title="RadiotherapySpecification (tumortwin.types.RadiotherapySpecification)" href="../../types/treatments/#tumortwin.types.treatment.RadiotherapySpecification">RadiotherapySpecification</a></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>List of timepoints at which the solution is desired.</p>
+                <p>Radiotherapy parameters,
+including protocol (dose and times), alpha, and alpha/beta ratio.</p>
               </div>
             </td>
             <td>
@@ -2017,18 +1945,34 @@ Must be implemented by subclasses.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>u_initial</code>
+                <code>alpha</code>
             </td>
             <td>
-                  <code><span title="torch.Tensor">Tensor</span></code>
+                  <code><span title="float">float</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Initial tumor density field.</p>
+                <p>Intrinsic radiosensitivity of cells. Defaults to 1.0.</p>
               </div>
             </td>
             <td>
-                <em>required</em>
+                  <code>1.0</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>alpha_beta_ratio</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The alpha-beta ratio. Defaults to 10.0.</p>
+              </div>
+            </td>
+            <td>
+                  <code>10.0</code>
             </td>
           </tr>
       </tbody>
@@ -2046,13 +1990,15 @@ Must be implemented by subclasses.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="typing.Tuple">Tuple</span>[<span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>], <span title="typing.List">List</span>[<span title="torch.Tensor">Tensor</span>]]</code>
+                  <code><span title="typing.Dict">Dict</span>[<a class="autorefs autorefs-internal" title="TreatmentTime = datetime
+
+  
+      module-attribute
+   (tumortwin.types.TreatmentTime)" href="../../types/treatments/#tumortwin.types.treatment.TreatmentTime">TreatmentTime</a>, <span title="float">float</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Tuple[List[datetime], List[torch.Tensor]]:
-- List of datetime objects corresponding to the solution timepoints.
-- List of torch.Tensor objects representing the tumor density at each timepoint.</p>
+                <p>Dict[TreatmentTime, float]: A dictionary mapping treatment times to cell survival fractions.</p>
               </div>
             </td>
           </tr>
@@ -2060,22 +2006,90 @@ Must be implemented by subclasses.</p>
     </table>
 
 
-<p><span class="doc-section-title">Raises:</span></p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="tumortwin.treatments.radiotherapy.compute_radiotherapy_cell_survival_fraction" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">compute_radiotherapy_cell_survival_fraction</span><span class="p">(</span><span class="n">rt</span><span class="p">,</span> <span class="n">dose</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute the cell survival fraction for a single radiotherapy dose.</p>
+<p>This function uses the linear-quadratic model to compute the survival fraction of cells
+after a given dose of radiation.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
     <table>
       <thead>
         <tr>
+          <th>Name</th>
           <th>Type</th>
           <th>Description</th>
+          <th>Default</th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
+                <code>rt</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="RadiotherapySpecification (tumortwin.types.RadiotherapySpecification)" href="../../types/treatments/#tumortwin.types.treatment.RadiotherapySpecification">RadiotherapySpecification</a></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>If not implemented by a subclass.</p>
+                <p>Radiotherapy parameters, including alpha and
+alpha/beta ratio.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>dose</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The radiation dose administered.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>float</code></td>            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The fraction of cells surviving the dose.</p>
               </div>
             </td>
           </tr>
@@ -2087,14 +2101,57 @@ Must be implemented by subclasses.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
 
 
-  </div>
+<h2 id="tumortwin.treatments.radiotherapy.plot_radiotherapy" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">plot_radiotherapy</span><span class="p">(</span><span class="n">radiotherapy_specification</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Plot the cell survival fractions for a radiotherapy protocol.</p>
+<p>This function computes and visualizes the cell survival fractions over time
+for the given radiotherapy protocol.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>radiotherapy_specification</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="RadiotherapySpecification (tumortwin.types.RadiotherapySpecification)" href="../../types/treatments/#tumortwin.types.treatment.RadiotherapySpecification">RadiotherapySpecification</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Radiotherapy parameters,
+including protocol (dose and times), alpha, and alpha/beta ratio.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
     </div>
 
 </div>
-
 
 
 

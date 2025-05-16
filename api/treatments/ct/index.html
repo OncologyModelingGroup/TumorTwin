@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sitename.example/api/solvers/base/">
+        <link rel="canonical" href="https://sitename.example/api/treatments/ct/">
       
       
-        <link rel="prev" href="../../models/rxdx/">
+        <link rel="prev" href="../rt/">
       
       
-        <link rel="next" href="../torchdiffeq/">
+        <link rel="next" href="../../models/base/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Solver Base Class - TumorTwin</title>
+        <title>Chemotherapy - TumorTwin</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tumortwin.solvers.base" class="md-skip">
+        <a href="#tumortwin.treatments.chemotherapy" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Solver Base Class
+              Chemotherapy
             
           </span>
         </div>
@@ -1067,6 +1067,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1077,11 +1079,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1_2" id="__nav_5_1_2_label" tabindex="0">
@@ -1097,7 +1099,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1_2">
             <span class="md-nav__icon md-icon"></span>
             Treatments
@@ -1111,7 +1113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../treatments/rt/" class="md-nav__link">
+      <a href="../rt/" class="md-nav__link">
         
   
   
@@ -1131,10 +1133,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../treatments/ct/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Chemotherapy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1145,6 +1167,78 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      chemotherapy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.compute_cell_death_rate_for_chemo" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_cell_death_rate_for_chemo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.compute_chemo_concentration_for_dose" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_chemo_concentration_for_dose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.compute_chemo_concentrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_chemo_concentrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.compute_total_cell_death_chemo" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_total_cell_death_chemo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.plot_chemotherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      plot_chemotherapy
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1257,8 +1351,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1269,11 +1361,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
         
           
           <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
@@ -1289,7 +1381,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_4">
             <span class="md-nav__icon md-icon"></span>
             Solvers
@@ -1300,30 +1392,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Solver Base Class
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../solvers/base/" class="md-nav__link">
         
   
   
@@ -1334,57 +1406,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
-    <span class="md-ellipsis">
-      base
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
-    <span class="md-ellipsis">
-      ForwardSolver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1397,7 +1418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../torchdiffeq/" class="md-nav__link">
+      <a href="../../solvers/torchdiffeq/" class="md-nav__link">
         
   
   
@@ -1818,35 +1839,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
+  <a href="#tumortwin.treatments.chemotherapy" class="md-nav__link">
     <span class="md-ellipsis">
-      base
+      chemotherapy
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
+  <a href="#tumortwin.treatments.chemotherapy.compute_cell_death_rate_for_chemo" class="md-nav__link">
     <span class="md-ellipsis">
-      ForwardSolver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
+      compute_cell_death_rate_for_chemo
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.compute_chemo_concentration_for_dose" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_chemo_concentration_for_dose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.compute_chemo_concentrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_chemo_concentrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.compute_total_cell_death_chemo" class="md-nav__link">
+    <span class="md-ellipsis">
+      compute_total_cell_death_chemo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tumortwin.treatments.chemotherapy.plot_chemotherapy" class="md-nav__link">
+    <span class="md-ellipsis">
+      plot_chemotherapy
+    </span>
+  </a>
   
 </li>
       
@@ -1866,95 +1908,14 @@
 
 
 
-  <h1>Solver Base Class</h1>
+  <h1>Chemotherapy</h1>
 
 <div class="doc doc-object doc-module">
 
 
 
-<a id="tumortwin.solvers.base"></a>
+<a id="tumortwin.treatments.chemotherapy"></a>
     <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="tumortwin.solvers.base.ForwardSolver" class="doc doc-heading">
-            <code>ForwardSolver</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-
-        <p>Abstract base class for forward solvers in tumor growth modeling.</p>
-<p>A forward solver numerically integrates the evolution of the tumor density field
-over specified timepoints, starting from an initial condition.</p>
-
-
-<p><span class="doc-section-title">Methods:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-            <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="solve(timepoints, u_initial) (tumortwin.solvers.base.ForwardSolver.solve)" href="#tumortwin.solvers.base.ForwardSolver.solve">solve</a></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Computes the tumor density at each timepoint by solving the growth model.
-Must be implemented by subclasses.</p>
-                </div>
-              </td>
-            </tr>
-      </tbody>
-    </table>
-
-
-<p><span class="doc-section-title">Raises:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>If a subclass does not implement the <code>solve</code> method.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
 
 
 
@@ -1977,15 +1938,15 @@ Must be implemented by subclasses.</p>
 <div class="doc doc-object doc-function">
 
 
-<h3 id="tumortwin.solvers.base.ForwardSolver.solve" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">solve</span><span class="p">(</span><span class="n">timepoints</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">)</span></code>
+<h2 id="tumortwin.treatments.chemotherapy.compute_cell_death_rate_for_chemo" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">compute_cell_death_rate_for_chemo</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">chemo_spec</span><span class="p">)</span></code>
 
-</h3>
+</h2>
 
 
     <div class="doc doc-contents ">
 
-        <p>Abstract method to solve the tumor growth model.</p>
+        <p>Compute the rate of cell death induced by chemotherapy at a given time.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -2001,14 +1962,14 @@ Must be implemented by subclasses.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                <code>timepoints</code>
+                <code>t</code>
             </td>
             <td>
-                  <code><span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>]</code>
+                  <code><span title="datetime.datetime">datetime</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>List of timepoints at which the solution is desired.</p>
+                <p>The current time for the calculation.</p>
               </div>
             </td>
             <td>
@@ -2017,14 +1978,230 @@ Must be implemented by subclasses.</p>
           </tr>
           <tr class="doc-section-item">
             <td>
-                <code>u_initial</code>
+                <code>chemo_spec</code>
             </td>
             <td>
+                  <code><a class="autorefs autorefs-internal" title="ChemotherapySpecification (tumortwin.types.ChemotherapySpecification)" href="../../types/treatments/#tumortwin.types.treatment.ChemotherapySpecification">ChemotherapySpecification</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Specifications for chemotherapy,
+including sensitivity and protocol.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>float</code></td>            <td>
                   <code><span title="torch.Tensor">Tensor</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Initial tumor density field.</p>
+                <p>The rate of cell death induced by the drug.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="tumortwin.treatments.chemotherapy.compute_chemo_concentration_for_dose" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">compute_chemo_concentration_for_dose</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">decay_rate</span><span class="p">,</span> <span class="n">treatment_day</span><span class="p">,</span> <span class="n">dose</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute the drug concentration for a single chemotherapy dose.</p>
+<p>This uses an exponential decay model to calculate the concentration of the drug
+at a specific time after its administration.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>t</code>
+            </td>
+            <td>
+                  <code><span title="datetime.datetime">datetime</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The current time for concentration calculation.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>decay_rate</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The drug decay rate (1/day).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>treatment_day</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="TreatmentTime = datetime
+
+  
+      module-attribute
+   (tumortwin.types.TreatmentTime)" href="../../types/treatments/#tumortwin.types.treatment.TreatmentTime">TreatmentTime</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The time the dose was administered.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>dose</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The administered dose.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>float</code></td>            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The drug concentration at time <code>t</code>.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="tumortwin.treatments.chemotherapy.compute_chemo_concentrations" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">compute_chemo_concentrations</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">chemotherapy_specification</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute the concentrations of chemotherapy drugs for all doses in a protocol.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>t</code>
+            </td>
+            <td>
+                  <code><span title="datetime.datetime">datetime</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The current time for concentration calculation.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>chemotherapy_specification</code>
+            </td>
+            <td>
+                  <code><a class="autorefs autorefs-internal" title="ChemotherapySpecification (tumortwin.types.ChemotherapySpecification)" href="../../types/treatments/#tumortwin.types.treatment.ChemotherapySpecification">ChemotherapySpecification</a></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Specifications
+for chemotherapy, including protocol and decay rate.</p>
               </div>
             </td>
             <td>
@@ -2046,13 +2223,11 @@ Must be implemented by subclasses.</p>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="typing.Tuple">Tuple</span>[<span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>], <span title="typing.List">List</span>[<span title="torch.Tensor">Tensor</span>]]</code>
+                  <code><span title="typing.List">List</span>[<span title="float">float</span>]</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>Tuple[List[datetime], List[torch.Tensor]]:
-- List of datetime objects corresponding to the solution timepoints.
-- List of torch.Tensor objects representing the tumor density at each timepoint.</p>
+                <p>List[float]: A list of drug concentrations, one for each dose in the protocol.</p>
               </div>
             </td>
           </tr>
@@ -2060,22 +2235,88 @@ Must be implemented by subclasses.</p>
     </table>
 
 
-<p><span class="doc-section-title">Raises:</span></p>
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="tumortwin.treatments.chemotherapy.compute_total_cell_death_chemo" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">compute_total_cell_death_chemo</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">chemo_specs</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute the total rate of cell death induced by multiple chemotherapy drugs.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
     <table>
       <thead>
         <tr>
+          <th>Name</th>
           <th>Type</th>
           <th>Description</th>
+          <th>Default</th>
         </tr>
       </thead>
       <tbody>
           <tr class="doc-section-item">
             <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
+                <code>t</code>
+            </td>
+            <td>
+                  <code><span title="datetime.datetime">datetime</span></code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>If not implemented by a subclass.</p>
+                <p>The current time for the calculation.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>chemo_specs</code>
+            </td>
+            <td>
+                  <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="ChemotherapySpecification (tumortwin.types.ChemotherapySpecification)" href="../../types/treatments/#tumortwin.types.treatment.ChemotherapySpecification">ChemotherapySpecification</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of chemotherapy
+specifications for different drugs.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>float</code></td>            <td>
+                  <code><span title="torch.Tensor">Tensor</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The total rate of cell death induced by all drugs.</p>
               </div>
             </td>
           </tr>
@@ -2087,14 +2328,73 @@ Must be implemented by subclasses.</p>
 
 </div>
 
+<div class="doc doc-object doc-function">
 
 
-  </div>
+<h2 id="tumortwin.treatments.chemotherapy.plot_chemotherapy" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">plot_chemotherapy</span><span class="p">(</span><span class="n">timesteps</span><span class="p">,</span> <span class="n">chemotherapy_specifications</span><span class="p">)</span></code>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Plot chemotherapy drug concentrations and their effects over time.</p>
+<p>This function visualizes the time-dependent concentrations of chemotherapy drugs
+and their sensitivity-scaled effects, as well as the total cell death rate.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>timesteps</code>
+            </td>
+            <td>
+                  <code><span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The times at which to compute the concentrations and effects.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>chemotherapy_specifications</code>
+            </td>
+            <td>
+                  <code><span title="typing.List">List</span>[<a class="autorefs autorefs-internal" title="ChemotherapySpecification (tumortwin.types.ChemotherapySpecification)" href="../../types/treatments/#tumortwin.types.treatment.ChemotherapySpecification">ChemotherapySpecification</a>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Specifications
+for the chemotherapy drugs to be plotted.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
 
     </div>
 
 </div>
-
 
 
 

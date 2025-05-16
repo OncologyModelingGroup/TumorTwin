@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://sitename.example/api/solvers/base/">
+        <link rel="canonical" href="https://sitename.example/developers/developer/">
       
       
-        <link rel="prev" href="../../models/rxdx/">
+        <link rel="prev" href="../../tutorials/HGG_Gradients/">
       
       
-        <link rel="next" href="../torchdiffeq/">
+        <link rel="next" href="../../theory/theory/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
     
     
       
-        <title>Solver Base Class - TumorTwin</title>
+        <title>Guidance for developers - TumorTwin</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,11 +48,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tumortwin.solvers.base" class="md-skip">
+        <a href="#guidance-for-developers" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +92,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="TumorTwin" class="md-header__button md-logo" aria-label="TumorTwin" data-md-component="logo">
+    <a href="../.." title="TumorTwin" class="md-header__button md-logo" aria-label="TumorTwin" data-md-component="logo">
       
-  <img src="../../../assets/tumor_twin_logo_whitebg.png" alt="logo">
+  <img src="../../assets/tumor_twin_logo_whitebg.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Solver Base Class
+              Guidance for developers
             
           </span>
         </div>
@@ -212,7 +212,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
   
@@ -232,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../tutorials/" class="md-tabs__link">
+        <a href="../../tutorials/" class="md-tabs__link">
           
   
   
@@ -248,11 +248,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../developers/developer/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -272,7 +274,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../theory/theory/" class="md-tabs__link">
+        <a href="../../theory/theory/" class="md-tabs__link">
           
   
   
@@ -288,7 +290,12 @@
   
   
   
+  
     
+    
+      
+  
+  
   
   
     
@@ -297,22 +304,11 @@
   
   
   
-    
-  
   
     
     
-      
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../preprocessing/boundary_conditions/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../api/preprocessing/boundary_conditions/" class="md-tabs__link">
           
   
   
@@ -352,9 +348,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="TumorTwin" class="md-nav__button md-logo" aria-label="TumorTwin" data-md-component="logo">
+    <a href="../.." title="TumorTwin" class="md-nav__button md-logo" aria-label="TumorTwin" data-md-component="logo">
       
-  <img src="../../../assets/tumor_twin_logo_whitebg.png" alt="logo">
+  <img src="../../assets/tumor_twin_logo_whitebg.png" alt="logo">
 
     </a>
     TumorTwin
@@ -410,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -433,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../installation/" class="md-nav__link">
+      <a href="../../installation/" class="md-nav__link">
         
   
   
@@ -456,7 +452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   
@@ -479,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../LICENSE/" class="md-nav__link">
+      <a href="../../LICENSE/" class="md-nav__link">
         
   
   
@@ -550,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/" class="md-nav__link">
+      <a href="../../tutorials/" class="md-nav__link">
         
   
   
@@ -614,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/HGG_Demo/" class="md-nav__link">
+      <a href="../../tutorials/HGG_Demo/" class="md-nav__link">
         
   
   
@@ -637,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/TNBC_Demo/" class="md-nav__link">
+      <a href="../../tutorials/TNBC_Demo/" class="md-nav__link">
         
   
   
@@ -668,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/Cropping_Demo/" class="md-nav__link">
+      <a href="../../tutorials/Cropping_Demo/" class="md-nav__link">
         
   
   
@@ -691,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorials/HGG_Gradients/" class="md-nav__link">
+      <a href="../../tutorials/HGG_Gradients/" class="md-nav__link">
         
   
   
@@ -718,24 +714,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -748,7 +749,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Developers
@@ -759,10 +760,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../developers/developer/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -773,6 +783,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -833,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../theory/theory/" class="md-nav__link">
+      <a href="../../theory/theory/" class="md-nav__link">
         
   
   
@@ -860,29 +871,24 @@
       
   
   
-    
   
   
-  
     
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -895,7 +901,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             API Documentation
@@ -906,8 +912,6 @@
                 
   
   
-    
-  
   
   
     
@@ -918,11 +922,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -938,7 +942,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             TumorTwin
@@ -993,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../preprocessing/boundary_conditions/" class="md-nav__link">
+      <a href="../../api/preprocessing/boundary_conditions/" class="md-nav__link">
         
   
   
@@ -1016,7 +1020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../preprocessing/cellularity/" class="md-nav__link">
+      <a href="../../api/preprocessing/cellularity/" class="md-nav__link">
         
   
   
@@ -1039,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../preprocessing/crop/" class="md-nav__link">
+      <a href="../../api/preprocessing/crop/" class="md-nav__link">
         
   
   
@@ -1111,7 +1115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../treatments/rt/" class="md-nav__link">
+      <a href="../../api/treatments/rt/" class="md-nav__link">
         
   
   
@@ -1134,7 +1138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../treatments/ct/" class="md-nav__link">
+      <a href="../../api/treatments/ct/" class="md-nav__link">
         
   
   
@@ -1206,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/base/" class="md-nav__link">
+      <a href="../../api/models/base/" class="md-nav__link">
         
   
   
@@ -1229,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/rxdx/" class="md-nav__link">
+      <a href="../../api/models/rxdx/" class="md-nav__link">
         
   
   
@@ -1257,8 +1261,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1269,11 +1271,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_4" >
         
           
           <label class="md-nav__link" for="__nav_5_1_4" id="__nav_5_1_4_label" tabindex="0">
@@ -1289,7 +1291,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_4">
             <span class="md-nav__icon md-icon"></span>
             Solvers
@@ -1300,30 +1302,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Solver Base Class
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../api/solvers/base/" class="md-nav__link">
         
   
   
@@ -1334,57 +1316,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
-    <span class="md-ellipsis">
-      base
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
-    <span class="md-ellipsis">
-      ForwardSolver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1397,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../torchdiffeq/" class="md-nav__link">
+      <a href="../../api/solvers/torchdiffeq/" class="md-nav__link">
         
   
   
@@ -1469,7 +1400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../optimizers/lm/" class="md-nav__link">
+      <a href="../../api/optimizers/lm/" class="md-nav__link">
         
   
   
@@ -1541,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../postprocessing/qoi/" class="md-nav__link">
+      <a href="../../api/postprocessing/qoi/" class="md-nav__link">
         
   
   
@@ -1564,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../postprocessing/tcc/" class="md-nav__link">
+      <a href="../../api/postprocessing/tcc/" class="md-nav__link">
         
   
   
@@ -1677,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/patient_data/hgg_types/" class="md-nav__link">
+      <a href="../../api/types/patient_data/hgg_types/" class="md-nav__link">
         
   
   
@@ -1700,7 +1631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/patient_data/tnbc_types/" class="md-nav__link">
+      <a href="../../api/types/patient_data/tnbc_types/" class="md-nav__link">
         
   
   
@@ -1731,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/imaging/" class="md-nav__link">
+      <a href="../../api/types/imaging/" class="md-nav__link">
         
   
   
@@ -1754,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../types/treatments/" class="md-nav__link">
+      <a href="../../api/types/treatments/" class="md-nav__link">
         
   
   
@@ -1810,47 +1741,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base" class="md-nav__link">
-    <span class="md-ellipsis">
-      base
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver" class="md-nav__link">
-    <span class="md-ellipsis">
-      ForwardSolver
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="ForwardSolver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tumortwin.solvers.base.ForwardSolver.solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1866,243 +1758,39 @@
 
 
 
-  <h1>Solver Base Class</h1>
-
-<div class="doc doc-object doc-module">
-
-
-
-<a id="tumortwin.solvers.base"></a>
-    <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="tumortwin.solvers.base.ForwardSolver" class="doc doc-heading">
-            <code>ForwardSolver</code>
-
-
-</h2>
-
-
-    <div class="doc doc-contents ">
-
-
-        <p>Abstract base class for forward solvers in tumor growth modeling.</p>
-<p>A forward solver numerically integrates the evolution of the tumor density field
-over specified timepoints, starting from an initial condition.</p>
-
-
-<p><span class="doc-section-title">Methods:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-            <tr class="doc-section-item">
-              <td><code><a class="autorefs autorefs-internal" title="solve(timepoints, u_initial) (tumortwin.solvers.base.ForwardSolver.solve)" href="#tumortwin.solvers.base.ForwardSolver.solve">solve</a></code></td>
-              <td>
-                <div class="doc-md-description">
-                  <p>Computes the tumor density at each timepoint by solving the growth model.
-Must be implemented by subclasses.</p>
-                </div>
-              </td>
-            </tr>
-      </tbody>
-    </table>
-
-
-<p><span class="doc-section-title">Raises:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>If a subclass does not implement the <code>solve</code> method.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="tumortwin.solvers.base.ForwardSolver.solve" class="doc doc-heading">
-            <code class="highlight language-python"><span class="n">solve</span><span class="p">(</span><span class="n">timepoints</span><span class="p">,</span> <span class="n">u_initial</span><span class="p">)</span></code>
-
-</h3>
-
-
-    <div class="doc doc-contents ">
-
-        <p>Abstract method to solve the tumor growth model.</p>
-
-
-<p><span class="doc-section-title">Parameters:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Type</th>
-          <th>Description</th>
-          <th>Default</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                <code>timepoints</code>
-            </td>
-            <td>
-                  <code><span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>List of timepoints at which the solution is desired.</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-          <tr class="doc-section-item">
-            <td>
-                <code>u_initial</code>
-            </td>
-            <td>
-                  <code><span title="torch.Tensor">Tensor</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Initial tumor density field.</p>
-              </div>
-            </td>
-            <td>
-                <em>required</em>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    <p><span class="doc-section-title">Returns:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><span title="typing.Tuple">Tuple</span>[<span title="typing.List">List</span>[<span title="datetime.datetime">datetime</span>], <span title="typing.List">List</span>[<span title="torch.Tensor">Tensor</span>]]</code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>Tuple[List[datetime], List[torch.Tensor]]:
-- List of datetime objects corresponding to the solution timepoints.
-- List of torch.Tensor objects representing the tumor density at each timepoint.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-<p><span class="doc-section-title">Raises:</span></p>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-          <tr class="doc-section-item">
-            <td>
-                  <code><span title="NotImplementedError">NotImplementedError</span></code>
-            </td>
-            <td>
-              <div class="doc-md-description">
-                <p>If not implemented by a subclass.</p>
-              </div>
-            </td>
-          </tr>
-      </tbody>
-    </table>
-
-
-    </div>
-
-</div>
-
-
-
-  </div>
-
-    </div>
-
-</div>
-
-
-
-
-  </div>
-
-    </div>
-
-</div>
+<h1 id="guidance-for-developers">Guidance for developers</h1>
+<p><code>TumorTwin</code> is designed to be a foundation for you to build on top of and extend!</p>
+<p>The core workflow in <code>TumorTwin</code> is as follows:</p>
+<h1 id="_1"><img alt="TumorTwin Workflow" src="../../assets/workflow.png" /></h1>
+<p>Extending the package to your own use-case or research task could involve modifying one or more of these core features - For each we provide a brief discussion about how you might think about and approach development:
+1. <a href="#simulating a-new-patient">Simulating a new Patients</a>
+2. <a href="#modifying-the-patientdata-object">Modifying the <code>PatientData</code> object</a>
+3. <a href="#modifying-or-creating-a-new-tumorgrowthmodel">Modifying or creating a new <code>TumorGrowthModel</code></a>
+4. <a href="#introducing-new-treatment-models">Introducing new treatment models</a>
+5. <a href="#experimenting-with-different-solvers">Experimenting with different <code>Solver</code>s</a>
+6. <a href="#experimenting-with-different-optimizers">Experimenting with different <code>Optimizer</code>s</a></p>
+<h2 id="simulating-a-new-patient">Simulating a new Patient</h2>
+<p>We store information about each patient in a <code>.json</code> configuration file (<a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/input_files/HGG_demo_001/HGG_demo_001.json">HGG Example</a>, <a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/input_files/TNBC_demo_001/TNBC_demo_001.json">TNBC Example</a>)</p>
+<p>These files contain all the treatment and imaging data (via pointers to image files) for a specific patient, and are designed to be loaded into their respective <code>PatientData</code> objects, via their <code>.from_file()</code> method. Under the hood, <code>PatientData</code> objects are <a href="https://docs.pydantic.dev/latest/"><code>pydantic</code></a> data models, and we use their <a href="https://docs.pydantic.dev/latest/concepts/json/#json-parsing">json parsing</a> to perform data validation. Thus, you should make sure that your <code>json</code> file is compatible with the <code>PatientData</code> object you intend to use.</p>
+<p>Filepaths in a patient configuration can be written out in full. As a convenience, we also support the use of an environment variable called <code>image_dir</code> to specify a parent directory for your medical imaging data. Any instance of <code>{$image_dir}</code> in a configuration file will be replaced by either the corresponding <code>image_url</code> variable in a <code>.env</code> file, or by the contents of the <code>image_dir</code> keyword argument specified when calling the <code>.from_file()</code> method. This convenience can allow different users to use the <em>same</em> configuration files by specifying an <code>image_dir</code> that is specific to their file system.</p>
+<h2 id="modifying-the-patientdata-object">Modifying the <code>PatientData</code> object</h2>
+<p>If you want to modify or extend the data sources that feed in to a patient-specific digital twin (e.g., additional treatment parameters, additional imaging types, additional non-imaging data about the patient, etc.), then you will likely need to create a new <code>PatientData</code> object for your use-case.</p>
+<p>We provide a <a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/tumortwin/types/base.py#L19"><code>BasePatientData</code></a> class which provides a basic structure and some convenient helper functions. We also provide two examples that inherit from this base class: <a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/tumortwin/types/hgg_data.py#L12"><code>HGGPatientData</code></a> and <a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/tumortwin/types/tnbc_data.py#L12"><code>TNBCPatientData</code></a>. We suggest studying these examples in order to understand how you might extend them to your needs. </p>
+<h2 id="modifying-or-creating-a-new-tumorgrowthmodel">Modifying or creating a new <code>TumorGrowthModel</code></h2>
+<p>We provide a basic <a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/tumortwin/models/reaction_diffusion_3d.py">3D reaction-diffusion model of tumor growth</a> (for details see the <a href="../../theory/theory/">Theory page</a>).</p>
+<p>This model inherits from a base <code>TumorGrowth3D</code> class. At it's core, the <code>TumorGrowth3D</code> interface defines an explicit ordinary differential equation (ODE) model. The <code>forward(t, u)</code> method evaluates the right-hand-side of the equation, i.e., the time derivative <code>du/dt</code>. In our reaction-diffusion example, the <code>forward()</code> method performs spatial discretization of the PDE model, and evaluates the time-derivative <code>du/dt</code> for the vector of voxel-wise cellularities, <code>u</code>.</p>
+<p>To implement your own model, you might consider implementing your own subclass of <code>TumorGrowthModel</code>. The core task here is to implement the <code>forward()</code> method that evaluates the right-hand side of the equation for your particular model, leveraging whatever <code>PatientData</code> and parameters you wish to provide the model.</p>
+<p>Note that this model will be used in the <code>torchdiffeq</code> solver, and as such it supports discrete events via the <code>callback_step</code> and <code>callback_step_adjoint</code> methods which allow you to modify the ODE solution at each timestep of the forward and backward passes, respectively (see <a href="https://github.com/rtqichen/torchdiffeq/blob/master/FURTHER_DOCUMENTATION.md#callbacks"><code>torchdiffeq</code> documentation</a> for more details).</p>
+<p><strong>Important:</strong> if you wish to leverage <code>pytorch</code>-based automatic differentiation, you will need to ensure that your <code>forward()</code> method only leverages differentiable operations </p>
+<h2 id="introducing-new-treatment-models">Introducing new treatment models</h2>
+<p>Treatment effects are handled entirely within the <code>TumorGrowthModel</code>. Treatments effects that appear in the right-hand side of the model (i.e., they affect the <code>du/dt</code> term) can be implemented directly into the model's <code>forward()</code> method. Treatments that involve a discrete/instantaneous effect on the solution value can be integrated via the model's <code>callback_step()</code> method. Data specifying the treatment (e.g. dosages, times) would typically be provided in the patient configuration file, and passed into the model via the <code>PatientData</code> object, while parameters in the treatment model (e.g., treatment sensitivities) would appear directly in the model.</p>
+<h2 id="experimenting-with-different-solver-algorithms">Experimenting with different <code>Solver</code> algorithms</h2>
+<p>We provide an interface to the <a href="https://github.com/rtqichen/torchdiffeq"><code>torchdiffeq</code></a> library via the <a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/tumortwin/solvers/torch_solver.py#L32"><code>TorchDiffEqSolver</code></a> object. This allows you to use any of the solvers and solver options supported by <code>torchdiffeq</code> (see documentation <a href="https://github.com/rtqichen/torchdiffeq/blob/master/FURTHER_DOCUMENTATION.md#further-documentation">here</a>)).</p>
+<p>If you wish to implement your own solver, you may wish to create a subclass of the <code>ForwardSolver</code> class and implement the <code>solve()</code> method.</p>
+<h2 id="experimenting-with-different-optimizer-strategies">Experimenting with different <code>Optimizer</code> strategies</h2>
+<p>A <code>TumorGrowth3D</code> model should be directly compatible with <code>pytorch.optim</code> <a href="https://pytorch.org/docs/stable/optim.html"><code>Optimizer</code></a> objects. This provides access to a variety of different optimization algorithms. Alternatively, you might wish to refer to our custom <a href="https://github.com/OncologyModelingGroup/TumorTwin/blob/36c21b45b526cd506d3421b509af813e1357b473/tumortwin/optimizers/lm_optimizer.py">Levenberg-Marquardt optimizer</a> to see how you might implement a custom optimizer.</p>
+<h2 id="need-further-guidance">Need further guidance?</h2>
+<p>If you are still unsure about how you might extend <code>TumorTwin</code> to suit your needs, feel free to reach out to one of the authors. The best way to do this is by <a href="https://github.com/OncologyModelingGroup/TumorTwin/issues/new/choose">opening a GitHub Issue</a>.</p>
 
 
 
@@ -2151,10 +1839,10 @@ Must be implemented by subclasses.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

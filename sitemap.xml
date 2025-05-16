@@ -2,90 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sitename.example/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/LICENSE/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/contributing/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/installation/</loc>
-         <lastmod>2025-04-11</lastmod>
-    </url>
-    <url>
-         <loc>https://sitename.example/theory/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/tutorials/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/models/base/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/models/rxdx/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/api/optimizers/lm/</loc>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/postprocessing/qoi/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/api/postprocessing/tcc/</loc>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/preprocessing/boundary_conditions/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/preprocessing/cellularity/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/preprocessing/crop/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/solvers/base/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/solvers/torchdiffeq/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/api/treatments/ct/</loc>
+         <lastmod>2025-05-16</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/api/treatments/rt/</loc>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/types/imaging/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/types/treatments/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/types/patient_data/hgg_types/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/api/types/patient_data/tnbc_types/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/developers/developer/</loc>
+         <lastmod>2025-05-16</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/theory/theory/</loc>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/tutorials/Cropping_Demo/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/tutorials/HGG_Demo/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/tutorials/HGG_Gradients/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/tutorials/TNBC_Demo/</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-05-16</lastmod>
     </url>
 </urlset>
