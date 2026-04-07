@@ -1,7 +1,9 @@
 import json
 from datetime import datetime
 from pathlib import Path
-from typing import Generic, List, Optional, Self, Text, TypeVar
+from typing import Generic, List, Optional, Text, TypeVar
+
+from typing_extensions import Self
 
 from pydantic import BaseModel, DirectoryPath, Field, FilePath, model_validator
 from pydantic_settings import SettingsConfigDict

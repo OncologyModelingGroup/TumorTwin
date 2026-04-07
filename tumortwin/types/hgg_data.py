@@ -1,5 +1,7 @@
 from pathlib import Path
-from typing import List, Optional, Self
+from typing import List, Optional
+
+from typing_extensions import Self
 
 import numpy as np
 from pydantic import model_validator

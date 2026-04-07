@@ -1,6 +1,8 @@
 from datetime import datetime
 from enum import Enum
-from typing import Dict, List, Self, TypeAlias
+from typing import Dict, List, TypeAlias
+
+from typing_extensions import Self
 
 import numpy as np
 import torch
